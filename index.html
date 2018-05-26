@@ -6,7 +6,11 @@
   <script> 
     alert(12);
     try {
-    fetch('http://api.pleasepay.co.uk/currencies')
+    fetch('http://api.pleasepay.co.uk/currencies',{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        })
   .then(function(response) {
 alert(response);
     return response.json();
