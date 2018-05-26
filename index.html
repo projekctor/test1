@@ -8,8 +8,12 @@
     try {
     fetch('https://api.pleasepay.co.uk/currencies')
       .then( response => response.json() )
-      .then(function(data) {
-        console.log(data);})
+      .then( data => {
+        const res = data.map( e => {
+          return e.translation.en;
+        }
+        console.log(res);
+       })
     .catch( alert );
       } 
     catch(err) {
