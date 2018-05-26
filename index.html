@@ -3,7 +3,8 @@
 <Title>Test page</Title>
 </head>
 <body>
-  <script>
+  <script> 
+    try {
     fetch('https://api.pleasepay.co.uk/currencies')
   .then(function(response) {
 alert(response);
@@ -13,6 +14,9 @@ alert(response);
     alert(data); // iliakan
   })
   .catch( alert );
+      } catch(err) {
+        alert(err);
+        }
     /<script>
 <h1>This is begin</h1>
 </body>
