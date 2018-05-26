@@ -3,6 +3,19 @@
 <Title>Test page</Title>
 </head>
 <body>
+  <script>
+    fetch('/article/fetch/user.json')
+  .then(function(response) {
+    alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
+    alert(response.status); // 200
+
+    return response.json();
+   })
+  .then(function(user) {
+    alert(user.name); // iliakan
+  })
+  .catch( alert );
+    /<script>
 <h1>This is begin</h1>
 </body>
 </html>
