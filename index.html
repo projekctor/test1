@@ -4,18 +4,18 @@
 </head>
 <body>
   <script> 
-    alert(12);
+
     try {
     fetch('https://api.pleasepay.co.uk/currencies')
       .then(function(response) {
-        alert(response);
+        console.log(response);
         return response.json(); })
       .then(function(data) {
-        alert(data);})
+        console.log(data);})
     .catch( alert );
       } 
     catch(err) {
-      alert(err);
+      console.log('1  '+err);
     }
     </script>
 <h1>This is begin</h1>
