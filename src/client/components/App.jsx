@@ -12,7 +12,7 @@ class Country extends React.Component {
 
 	handleCounChange = (selectedOption) => {
 		this.props.countryStore.setCountry(selectedOption);
-		this.props.currencyStore.setCurrency( {value: selectedOption.currency, label: selectedOption.currency} );		
+		this.props.currencyStore.setCurrency( (selectedOption) ? {value: selectedOption.currency, label: selectedOption.currency} : null );		
 	};
 	
 	render() {
