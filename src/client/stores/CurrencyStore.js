@@ -29,7 +29,7 @@ class CurrencyStore {
 	
   @action setCurrency(incurrency) {
 	  this.currency = incurrency;
-	  localStorage.setItem('Currency', JSON.stringify(serialize(SerData, incurrency)) );
+	  incurrency ? localStorage.setItem('Currency', JSON.stringify(serialize(SerData, incurrency)) ) : localStorage.removeItem('Currency');
   };
  
   @action 

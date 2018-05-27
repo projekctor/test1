@@ -29,7 +29,7 @@ class CountryStore {
 	
   @action setCountry(incountry) {
 	  this.country = incountry;
-	  localStorage.setItem('Country', JSON.stringify(serialize(SerData, incountry)) );
+	  incountry ? localStorage.setItem('Country', JSON.stringify(serialize(SerData, incountry)) ) : localStorage.removeItem('Country');
   };
  
   @action
