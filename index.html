@@ -1,24 +1,13 @@
 <html>
 <head>
-<Title>Test page</Title>
+  <meta charset="UTF-8">
+  <title>Test React Mobx</title>
 </head>
 <body>
-  <script> 
+  <h1>Sample Web App</h1>
+  <div id="root"></div>
 
-    try {
-    fetch('https://api.pleasepay.co.uk/currencies')
-      .then( response => response.json() )
-      .then( data => {
-        const res = data.map( e => return e.translation.en );
-        }
-        console.log(res);
-       })
-    .catch( alert );
-      } 
-    catch(err) {
-      console.log('1  '+err);
-    }  
-    </script>
-<h1>This is begin</h1>
+  <script src="build/bundle.js"></script>
+
 </body>
 </html>
